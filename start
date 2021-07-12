@@ -23,7 +23,7 @@ _get_repolink () {
     local regex
     local rlink
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "Telethon-Ar" ]]
+    if [[ $UPSTREAM_REPO == "Telethon ALBASHA" ]]
     then
         rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uLUFyYWIvVGVsZXRob24tQXI=" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
@@ -44,7 +44,7 @@ _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
 
-OFFICIAL_UPSTREAM_REPO = "https://github.com/telethon-Arab/telethon-Ar-pack"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/kokihassan/USERBOT-ALBASHA"
 ACTIVE_BRANCH_NAME = "master"
 
 repo = Repo.init()
@@ -76,7 +76,7 @@ _set_bot () {
     CATPATH=$(zipinfo -1 "$zippath" | grep -v "/.");
     unzip -qq "$zippath"
     echo "Done"
-    echo "  جـاري الاسـتراد لـتليثون الـعرب  ..."
+    echo "  جاري استراد تليثون الباشا  ..."
     rm -rf "$zippath"
     sleep 5
     _run_catpack_git
@@ -84,16 +84,11 @@ _set_bot () {
     _run_cat_git
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
-    echo "    Starting Teletho-Ar    "
+    echo "    Starting Teletho ALBASHA    "
     echo "
-                        :':::::'🇦🇪🇦🇪🇦🇪::::'🇸🇦🇸🇦🇸🇦::::
-                        '🇪🇬🇪🇬🇪🇬:::'🇩🇿🇩🇿🇩🇿:::...🇯🇴🇯🇴🇯🇴..:::::
-                         🇧🇭🇧🇭🇧🇭:::..:::'🇵🇰🇵🇰🇵🇰:::::: 🇱🇾🇱🇾🇱🇾:::::::
-                         :::::::':::🇲🇦🇲🇦🇲🇦:::: 🇴🇲🇴🇲🇴🇲:::::::
-                         ::::::: 🇰🇼🇰🇼🇰🇼:::: 🇱🇧🇱🇧🇱🇧:::::::
-                         :::::::: 🇸🇾🇸🇾🇸🇾:::::::
-                         ::::::::::🇪🇭🇪🇭🇪🇭:::::::
-                         🇮🇶🇮🇶::::::🇮🇶🇮🇶::::🇮🇶🇮🇶::::::🇮🇶🇮🇶:::::
+                        ALBASHA 😏🥱
+                        سااعود لكم بي مستقبل جديد 
+                        ALBASHA ☝
     "
 
     python3 -m userbot
